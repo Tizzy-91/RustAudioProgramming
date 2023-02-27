@@ -1,7 +1,0 @@
-C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\symphonia_codec_alac-b50cac9a99cdeeba.rmeta: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\symphonia-codec-alac-0.5.2\src\lib.rs
-
-C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\libsymphonia_codec_alac-b50cac9a99cdeeba.rlib: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\symphonia-codec-alac-0.5.2\src\lib.rs
-
-C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\symphonia_codec_alac-b50cac9a99cdeeba.d: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\symphonia-codec-alac-0.5.2\src\lib.rs
-
-C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\symphonia-codec-alac-0.5.2\src\lib.rs:

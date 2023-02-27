@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\build\typenum-3265597039d3d5bf\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\build\typenum-3265597039d3d5bf\out\op.rs
