@@ -1,0 +1,11 @@
+C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\read_input-8bfdbd36cf946686.rmeta: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\lib.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\core.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\prelude.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\shortcut.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\test_generators.rs
+
+C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\libread_input-8bfdbd36cf946686.rlib: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\lib.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\core.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\prelude.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\shortcut.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\test_generators.rs
+
+C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\target\debug\deps\read_input-8bfdbd36cf946686.d: C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\lib.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\core.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\prelude.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\shortcut.rs C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\test_generators.rs
+
+C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\lib.rs:
+C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\core.rs:
+C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\prelude.rs:
+C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\shortcut.rs:
+C:\Users\jesse\.cargo\registry\src\github.com-1ecc6299db9ec823\read_input-0.8.6\src\test_generators.rs:
