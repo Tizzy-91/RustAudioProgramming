@@ -7,8 +7,86 @@ use std::io::{Write, BufReader, BufRead, ErrorKind}; // use input/output, buffer
 use std::fs::File;
 use std::cmp::Ordering; // use comparison
 
-fn main(){
+fn main() {
     
+}
+
+fn make_string_pop_char2_vector_sort() {
+    let str1 = String::from("a f j i g t j i j g f j");
+
+    let mut v1: Vec<char> = str1.chars().collect();
+
+    v1.sort();
+    v1.dedup(); // remove duplicates
+
+    for char in v1 {
+        println!("char : {}", char);
+    }
+
+}
+
+fn push_to_mutable_string_and_forloop() {
+
+    // mutable growable string
+    let mut str1: String = String::new();
+    str1.push_str("Hello");
+    str1.push('A');
+    str1.push_str(" World");
+
+    for word in str1.split_whitespace() {
+        println!("word : {}", word);
+    }
+}
+
+fn tuples_example() {
+    // tuples can contain different types of data
+    let tup1: (i32, f64, u8) = (500, 6.4, 1);
+    let tup2: (u32, String, f64) = (500, String::from("Hello"), 6.4);
+
+    println!("tup1 : {:?}", tup1);
+    println!("tup2 : {:?}", tup2);
+    println!("tup1.0 : {}", tup1.0);
+    println!("tup2.1 : {}", tup2.1);
+    println!("tup2.1.len() : {}", tup2.1.len());
+
+}
+
+fn for_loop_over_array_1() {
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let mut loopdex = 0;
+
+    for val in arr.iter(){
+        println!("val : {}", val);
+    }
+}
+
+fn while_loop_over_array_1(){
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let mut loopdex = 0;
+
+    while loopdex < arr.len(){
+        println!("val : {}", arr[loopdex]);
+        loopdex += 1;
+    }
+}
+
+fn loop_over_array_2(){
+    let arr: [u128; 7] = [1324,2345,3456,4567,5678,6789,7890];
+    let mut loopdex = 0;
+    loop{
+
+        if loopdex >= 6{
+            break;
+        }
+
+        if arr[loopdex] % 2 == 0 {
+            loopdex += 1;
+            continue;
+        }
+
+        println!("val : {}", arr[loopdex]);
+        loopdex += 1;
+    }
 }
 
 fn loop_over_array_1() {
@@ -31,7 +109,6 @@ fn loop_over_array_1() {
         }
         continue;
     }
-
 }
 
 fn match_flow_control_comparison() {
