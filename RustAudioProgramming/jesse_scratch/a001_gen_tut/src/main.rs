@@ -43,6 +43,9 @@ fn main() {
     // generic rectangle
     // let rect: Rectangle<i32, f64> = Rectangle {length: 5, width: 6.5};
 
+    
+    // using the trait implementation for shape
+    let rect: Rectangle = Shape::new(5.0, 6.0);
 }
 
 // trait -- sort of like an interface in java
@@ -60,6 +63,17 @@ struct Rectangle {
 struct Triangle {
     length: f32,
     width: f32
+}
+
+// implementation of the shape trait for the rectangle struct
+impl Shape for Rectangle{
+    fn new(length: f32, width: f32) -> Rectangle {
+        Rectangle {length, width}
+    }
+
+    fn area(&self) -> f32 {
+        self.length * self.width
+    }
 }
 
 //generic struct
