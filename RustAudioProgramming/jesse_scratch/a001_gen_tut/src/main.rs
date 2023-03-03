@@ -1,14 +1,223 @@
 #![allow(unused)] // suppress warnings for unused code
 // tutorial video from https://www.youtube.com/watch?v=ygL_xcavzQ4
-use std::io; // standard library for input/output
+use std::{io, hash}; // standard library for input/output
 use rand::Rng; // use random number range -> needs dependency in Cargo.toml
 // import nested things from a crate
 use std::io::{Write, BufReader, BufRead, ErrorKind}; // use input/output, buffered reader, buffered read
 use std::fs::File;
 use std::cmp::Ordering; // use comparison
 
+// we need this do do addition with generics
+use std::ops::Add;
+
+// for hashmaps
+use std::collections::HashMap;
+
 fn main() {
+    // how to assign values out of a multiple return function
+    // let (x, y) = returning_multiple_values();
+    // println!("x : {}, y : {}\n", x, y);
     
+    // summing elements of a list
+    // let num_list = [1,2,3,4,5,6,7,8,9,10];
+    // println!("sum of list : {}\n", sum_list(&num_list));
+    // println!("alternate sum of list : {}\n", alternate_sum_list(&num_list));
+    // println!("advanced sum of list : {}\n", advanced_sum_list(&num_list));
+
+    //generic add
+    // println!("generic add : {}\n", get_sum_gen(5, 6));
+    // println!("generic add : {}\n", get_sum_gen(5.500, 6.534));
+
+    // hashmaps
+    // hashy_mappy();
+
+    // using a struct
+    // let mut customer1 = Customer {
+    //     name: String::from("Johnny Doeboy"),
+    //     age: 108,
+    //     active: true
+    // };
+
+    // customer1.name = String::from("Johnny Doeboy Jr.");
+    
+    // generic rectangle
+    // let rect: Rectangle<i32, f64> = Rectangle {length: 5, width: 6.5};
+
+}
+
+// trait -- sort of like an interface in java
+trait Shape {
+    fn new(length:f32, width:f32) -> Self; // a contrstuctor for the trait
+    fn area(&self) -> f32; // a method for the trait
+}
+
+// structs for the shape trait
+struct Rectangle {
+    length: f32,
+    width: f32
+}
+
+struct Triangle {
+    length: f32,
+    width: f32
+}
+
+//generic struct
+// struct Rectangle<T,U> {
+//     length: T,
+//     width: U
+// }
+
+// normal struct
+struct Customer {
+    name: String,
+    age: u8,
+    active: bool
+}
+
+fn hashy_mappy() {
+    let mut heroes = HashMap::new();
+    heroes.insert("Batman", "Bruce Wayne");
+    heroes.insert("Superman", "Clark Kent");
+    heroes.insert("Spiderman", "Peter Parker");
+
+    for (k, v) in heroes.iter(){
+        println!("{} is {}", k, v);
+    }
+}
+
+// utilizing the add "TRAIT"
+fn get_sum_gen<T: Add<Output = T>>(x: T, y: T) -> T {
+    return x + y;
+}
+
+fn advanced_sum_list(list: &[i32]) -> i32 {
+    list.iter().fold(0, |sum, x| sum + x)
+}
+
+fn alternate_sum_list(list: &[i32]) -> i32 {
+    let mut sum = 0;
+    for &val in list.iter(){
+        sum += &val;
+    }
+
+    sum
+}
+
+fn builtin_sum_list(list: &[i32]) -> i32 {
+    list.iter().sum()
+}
+
+fn sum_list(list: &[i32]) -> i32 {
+    let mut sum = 0;
+    for i in list {
+        sum += i;
+    }
+    sum
+}
+
+fn returning_multiple_values() -> (i32, i32) {
+    (5, 6)
+}
+
+fn returning_func() -> i32 {
+    5
+}
+
+fn second_returning_func() ->  i32 {
+    return 5
+}
+
+fn simple_func() {
+    println!("Hello, world!");
+}
+
+fn parameterized_func(x: i32, y: i32) {
+    println!("{} + {} = {}", x, y, x + y);
+}
+
+fn simple_vector_ops() {
+    let vec1: Vec<i32> = Vec::new();
+    let mut vec2 = vec![1,2,3,4,5,6,7,8,9,10];
+
+    vec2.push(5);
+    println!("vec2 : {:?}", vec2);
+    println!("vec2[0] : {}", vec2[0]);
+
+    // check if value exists in a vector
+    let second: &i32 = &vec2[1];
+    match vec2.get(1){
+        Some(second) => println!("second : {}", second),
+        None => println!("There is no second element")
+    }
+
+    for i in &mut vec2 {
+        *i *= 2;
+    }
+
+    for i in &vec2 {
+        println!("i : {}", i);
+    }
+
+    println!("Vec len: {}", vec2.len());
+    // can also pop last value
+    println!("Popped val : {}", vec2.pop().unwrap());
+}
+
+fn enums_enumerated_types() {
+    enum Days {
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        SUNDAY
+    }
+
+    impl Days {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Days::SATURDAY | Days::SUNDAY => true,
+                _ => false
+            }
+        }
+    }
+
+    let today: Days = Days::MONDAY;
+    match today {
+        Days::MONDAY => println!("Monday"),
+        Days::TUESDAY => println!("Tuesday"),
+        Days::WEDNESDAY => println!("Wednesday"),
+        Days::THURSDAY => println!("Thursday"),
+        Days::FRIDAY => println!("Friday"),
+        Days::SATURDAY => println!("Saturday"),
+        Days::SUNDAY => println!("Sunday"),
+    }
+
+    println!("Is today a weekend? {}", today.is_weekend());
+}
+
+fn casting_example() {
+    // casting example
+    let int_u8: u8 = 5;
+    let int2_u8: u8 = 4;
+    let int3_u32: u32 = (int_u8 as u32) + (int2_u8 as u32);
+}
+
+fn more_string_ops() {
+    let str1 = String::from("c j d l e i s h a k l l m e");
+    // turns a string into a byte array
+    let byte_arr = str1.as_bytes();
+
+    // get a str slice from a string
+    let str_slice = &str1[0..5];
+
+    // combine strings
+    let st2 = String::from("Hello");
+    let st3 = String::from("World");
+    let st4 = st2 + &st3; // st2 has been moved here and can no longer be used, st3 is borrowed
+
 }
 
 fn make_string_pop_char2_vector_sort() {
