@@ -1,0 +1,1 @@
+C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\a004_iterators\target\debug\a004_iterators.exe: C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\a004_iterators\src\main.rs
