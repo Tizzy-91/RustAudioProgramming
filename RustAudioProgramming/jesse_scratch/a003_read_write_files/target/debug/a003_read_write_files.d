@@ -1,0 +1,1 @@
+C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\a003_read_write_files\target\debug\a003_read_write_files.exe: C:\Users\jesse\Documents\Programming\RAP\RustAudioProgramming\RustAudioProgramming\jesse_scratch\a003_read_write_files\src\main.rs
